@@ -1,5 +1,5 @@
 {
-  "name": "Brian Brennan",
+  "name": "brianbrennan",
   "version": "0.1.0",
   "description": "Personal Portfolio Site",
   "author": "Brian Brennan <me@brianbrennan.com>",
@@ -9,7 +9,7 @@
     "gulp-livereload": "^3.5.0",
     "gulp-plumber": "^0.6.6",
     "gulp-sass": "^1.3.2",
-    "gulp-uglify": "^1.1.0",
+    "gulp-uglify": "^1.2.0",
     "gulp-watch": "^4.1.0",
     "gulp-webserver": "^0.9.0"
   }

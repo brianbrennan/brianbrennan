@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var compass = require('gulp-compass');
 var plumber = require('gulp-plumber');
 var livereload = require('gulp-livereload');
+var uglify = require('gulp-uglify');
 
 
 var onError = function (err) {  
@@ -29,6 +30,13 @@ gulp.task('sass', function(){
   .pipe(livereload());
 });
 
+gulp.task('uglify', function(){
+  gulp.src('components/js/scripts/*.js')
+  .pipe(plumber())
+  .pipe(uglify())
+  .pipe(gulp.dest('components/js'))
+});
+
 gulp.task('compass', function() {
   gulp.src('components/scss/style.scss')
   .pipe(plumber())
@@ -46,7 +54,8 @@ gulp.task('compass', function() {
 gulp.task('watch',function(){
   livereload.listen();
   gulp.watch('components/scss/*.scss',['compass']);
+  gulp.watch('components/js/scripts/*.js', ['uglify']);
 });
 
 
-gulp.task('default', [ 'compass', 'watch']);
+gulp.task('default', [ 'compass', 'uglify', 'watch']);
