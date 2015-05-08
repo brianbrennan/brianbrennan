@@ -1,3 +1,15 @@
+/*
+	Theme Name: Brian Brennan Custom
+	Theme URI: http://brianbrennan.com
+	Author: Brian Brennan
+	Author URI : http://brianbrenna.com
+
+*/
+
+
+
+
+
 //-----------------------------------------------Reset------------------------------------------
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -109,12 +121,12 @@ $gray:			#888;
 //-----------------------------------------------Mixins-----------------------------------------
 
 $susy: (
-  columns: 12,
-  gutters: 1/4,
-  math: fluid,
-  output: float,
-  gutter-position: inside,
-);
+	columns: 12,
+	gutters: 1/4,
+	math: fluid,
+	output: float,
+	gutter-position: inside,
+	);
 
 
 
@@ -126,6 +138,7 @@ body{
 	line-height:1.5;
 	font-size:$regFontSize;
 	color:$black;
+	height:1880vh;
 }
 
 a{
@@ -189,13 +202,19 @@ header{
 	width:100%;
 	background:$white;
 	box-shadow: $gray 0px 0px 10px;
+	@include transition(.3s);
+
 }
 
 nav{
+	@include transition(.3s);
+
 	.logo{
 		@include span(1 of 8);
 		height:90px;
 		vertical-align:middle;
+		@include transition(.3s);
+
 	}
 
 	ul{
@@ -205,12 +224,43 @@ nav{
 			text-align:center;
 			@include span(1 of 5);
 			vertical-align:middle;
-			@include transition(.2s);
+			@include transition(.3s);
 
 			&:hover{
 				color:$gray;
 			}
 		}
+	}
+}
+
+header.light{
+	background:none;
+	box-shadow:none;
+	nav{
+
+		.logo{
+			background:url('../img/logo-light.png');
+			@include span(1 of 8);
+			height:90px;
+			vertical-align:middle;
+			background-position:cover;
+			background-repeat:no-repeat;
+			background-size:100% auto;
+			@include transition(.3s);
+
+		}
+
+		ul{
+			li{
+				color:$white;
+				@include transition(.3s);
+
+				&:hover{
+					color:$gray;
+				}
+			}
+		}
+
 	}
 }
 
@@ -225,13 +275,27 @@ nav{
 	margin:$reg 0;
 }
 
+.rule2{
+	height:5px;
+	width:$lg;
+	background:$black;
+	margin:$reg 0;
+}
+
 .hero{
-	height:200vh;
+	height:100vh;
+	margin-top:-90px;
 	width:100%;
+	background:$gray;
 }
 
 .content{
 	padding:$lg 0;
+	@include container(60%);
+}
+
+.section{
+	margin:$lg 0;
 }
 
 //---------------About

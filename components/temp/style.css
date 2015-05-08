@@ -1,3 +1,10 @@
+/*
+	Theme Name: Brian Brennan Custom
+	Theme URI: http://brianbrennan.com
+	Author: Brian Brennan
+	Author URI : http://brianbrenna.com
+
+*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -69,6 +76,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
   color: #313131;
+  height: 1880vh;
 }
 
 a {
@@ -136,8 +144,16 @@ header {
   width: 100%;
   background: #FFF;
   box-shadow: #888 0px 0px 10px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
 }
 
+nav {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
 nav .logo {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -148,6 +164,9 @@ nav .logo {
   padding-right: 1.25%;
   height: 90px;
   vertical-align: middle;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
 }
 nav ul {
   -webkit-box-sizing: border-box;
@@ -169,11 +188,43 @@ nav ul li {
   padding-left: 2%;
   padding-right: 2%;
   vertical-align: middle;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
 }
 nav ul li:hover {
+  color: #888;
+}
+
+header.light {
+  background: none;
+  box-shadow: none;
+}
+header.light nav .logo {
+  background: url("../img/logo-light.png");
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 12.5%;
+  float: left;
+  padding-left: 1.25%;
+  padding-right: 1.25%;
+  height: 90px;
+  vertical-align: middle;
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+header.light nav ul li {
+  color: #FFF;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+header.light nav ul li:hover {
   color: #888;
 }
 
@@ -188,13 +239,34 @@ nav ul li:hover {
   margin: 30px 0;
 }
 
+.rule2 {
+  height: 5px;
+  width: 60px;
+  background: #313131;
+  margin: 30px 0;
+}
+
 .hero {
-  height: 200vh;
+  height: 100vh;
+  margin-top: -90px;
   width: 100%;
+  background: #888;
 }
 
 .content {
   padding: 60px 0;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.content:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.section {
+  margin: 60px 0;
 }
 
 .about {

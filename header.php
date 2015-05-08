@@ -4,10 +4,11 @@
 	<meta charset="UTF-8">
 	<title>Brian Brennan | Web Designer &amp; Developer</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="components/js/nav.js"></script>
 	<link rel="stylesheet" href="components/css/style.css">
 </head>
 <body>
-	<header>
+	<header class="light">
 		<div class="wrapper">
 		<nav>
 			<a href="index.php"><div class="logo">

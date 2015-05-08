@@ -3,8 +3,8 @@
 
 <div class="content about">
 	
-	<h1>About</h1>
-	<div class="rule"></div>
+	<h2>About</h2>
+	<div class="rule2"></div>
 
 	<p>Drinking vinegar keffiyeh meggings, brunch messenger bag Marfa fixie. Distillery roof party yr shabby chic ugh, sartorial biodiesel trust fund cliche iPhone Odd Future hoodie farm-to-table. Sartorial narwhal meggings post-ironic viral gentrify. Cronut health goth trust fund artisan banh mi vegan. Distillery shabby chic lomo Intelligentsia, pug McSweeney's Shoreditch cronut banjo Echo Park tofu. Chillwave pickled lomo, deep v mustache slow-carb Portland church-key freegan American Apparel. Pour-over banh mi occupy swag squid.</p>
 
@@ -19,7 +19,7 @@
 	<p>Beard authentic bespoke artisan Wes Anderson locavore. Selfies Wes Anderson Williamsburg, Tumblr stumptown beard flannel direct trade artisan letterpress actually shabby chic Echo Park meggings seitan. Before they sold out small batch fap, salvia chia church-key kale chips cliche Wes Anderson four dollar toast PBR forage butcher kogi. VHS Vice Williamsburg Marfa. Selfies Shoreditch paleo Etsy. Austin deep v wolf yr direct trade. Brunch deep v tote bag, Truffaut biodiesel mumblecore craft beer Blue Bottle four loko.</p>
 
 	<p>Freegan next level lomo art party Intelligentsia wolf single-origin coffee, disrupt Echo Park authentic leggings post-ironic fanny pack chia. Kickstarter polaroid biodiesel flannel Truffaut, umami Bushwick McSweeney's single-origin coffee. Keytar four loko organic freegan, post-ironic iPhone seitan banh mi put a bird on it tousled stumptown ethical Godard Banksy. Crucifix distillery farm-to-table, aesthetic food truck taxidermy before they sold out try-hard drinking vinegar Vice squid seitan wayfarers tofu. Lumbersexual locavore whatever, PBR&B semiotics distillery Odd Future pork belly authentic aesthetic butcher sustainable synth cornhole. Cray hoodie direct trade, skateboard Neutra kale chips street art craft beer photo booth fixie. Single-origin coffee before they sold out mustache Intelligentsia butcher, Marfa Godard street art chambray YOLO meh fap.</p>
-	
+
 	<p>Put a bird on it mustache messenger bag church-key High Life. Distillery flexitarian heirloom, freegan McSweeney's mlkshk four loko Godard Austin Neutra try-hard hella slow-carb. Mustache Odd Future banjo, jean shorts slow-carb taxidermy disrupt tote bag keytar Echo Park sustainable chillwave. Mlkshk readymade gluten-free migas, McSweeney's tousled Portland deep v Blue Bottle street art meditation mustache. Chia occupy bitters Neutra, master cleanse McSweeney's kogi. Fingerstache bicycle rights gluten-free, kitsch ugh lomo wolf PBR 3 wolf moon Schlitz drinking vinegar lumbersexual chambray. Meh Schlitz fap Shoreditch, art party kitsch meggings DIY semiotics crucifix bitters ethical irony viral.</p>
 
 
