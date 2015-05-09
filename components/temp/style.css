@@ -4,7 +4,7 @@
 	Author: Brian Brennan
 	Author URI : http://brianbrenna.com
 
-*/
+	*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -76,12 +76,17 @@ body {
   line-height: 1.5;
   font-size: 16px;
   color: #313131;
-  height: 1880vh;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+a:hover {
+  color: #FF5B71;
 }
 
 p {
@@ -135,6 +140,12 @@ h6 {
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
+.logo:hover {
+  background: url("../img/logo-red.png");
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
 
 header {
   height: 120px;
@@ -143,10 +154,12 @@ header {
   position: fixed;
   width: 100%;
   background: #FFF;
-  box-shadow: #888 0px 0px 10px;
+  box-shadow: #888 0px 0px 3px;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
+  top: 0px;
+  z-index: 10;
 }
 
 nav {
@@ -155,45 +168,49 @@ nav {
   transition: 0.3s;
 }
 nav .logo {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 12.5%;
+  width: 10.25641%;
   float: left;
-  padding-left: 1.25%;
-  padding-right: 1.25%;
-  height: 90px;
+  margin-right: 2.5641%;
+  height: 60px;
   vertical-align: middle;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
 nav ul {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 41.66667%;
+  width: 40.67797%;
   float: right;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  margin-right: 0;
 }
 nav ul li {
   margin: 15px 0;
   text-align: center;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 20%;
+  width: 16.66667%;
   float: left;
-  padding-left: 2%;
-  padding-right: 2%;
+  margin-right: 4.16667%;
   vertical-align: middle;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+nav ul li:nth-child(5) {
+  float: right;
+  margin-right: 0;
+}
+nav .contact a {
+  padding: 15px;
+  border: 3px solid #313131;
+}
+nav .contact a:hover {
+  border-color: #FF5B71;
+}
+
+.nav-up {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
-}
-nav ul li:hover {
-  color: #888;
+  top: -90px;
 }
 
 header.light {
@@ -202,14 +219,10 @@ header.light {
 }
 header.light nav .logo {
   background: url("../img/logo-light.png");
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 12.5%;
+  width: 10.25641%;
   float: left;
-  padding-left: 1.25%;
-  padding-right: 1.25%;
-  height: 90px;
+  margin-right: 2.5641%;
+  height: 60px;
   vertical-align: middle;
   background-position: cover;
   background-repeat: no-repeat;
@@ -218,18 +231,25 @@ header.light nav .logo {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
+header.light nav .logo:hover {
+  background: url("../img/logo-red.png");
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
 header.light nav ul li {
   color: #FFF;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  transition: 0.3s;
 }
-header.light nav ul li:hover {
-  color: #888;
+header.light nav .contact a {
+  border: 3px solid #FFF;
+}
+header.light nav .contact a:hover {
+  border-color: #FF5B71;
 }
 
 .clear {
   height: 90px;
+  clear: both;
 }
 
 .rule {
@@ -251,6 +271,8 @@ header.light nav ul li:hover {
   margin-top: -90px;
   width: 100%;
   background: #888;
+  background-size: 100% auto;
+  background-attachment: fixed;
 }
 
 .content {
@@ -266,7 +288,51 @@ header.light nav ul li:hover {
 }
 
 .section {
-  margin: 60px 0;
+  margin: 30px 0;
+}
+
+.workPiece {
+  margin: 15px inherit;
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+  height: 100px;
+  max-height: 300px;
+  background: #313131;
+}
+.workPiece:nth-child(3) {
+  float: right;
+  margin-right: 0;
+}
+
+.post {
+  margin: 15px inherit;
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+}
+.post a {
+  border: 5px solid #313131;
+  padding: 15px;
+  display: block;
+  min-height: 150px;
+  position: relative;
+  z-index: 0;
+}
+.post a:hover {
+  color: #FF5B71;
+  border-color: #FF5B71;
+}
+.post a span {
+  font-size: 12px;
+  display: block;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+.post:nth-child(5) {
+  float: right;
+  margin-right: 0;
 }
 
 .about {
@@ -280,7 +346,19 @@ header.light nav ul li:hover {
   clear: both;
 }
 
+.work {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.work:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
 .blog {
+  margin: 60px 0;
   max-width: 60%;
   margin-left: auto;
   margin-right: auto;
@@ -289,6 +367,27 @@ header.light nav ul li:hover {
   content: " ";
   display: block;
   clear: both;
+}
+
+.clearSingle {
+  height: 30px;
+  clear: both;
+}
+
+.single h1 {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+}
+.single h4 {
+  margin: 15px 0;
+  width: 23.72881%;
+  float: right;
+  margin-right: 0;
+}
+.single .rule {
+  float: left;
+  clear: left;
 }
 
 /*# sourceMappingURL=style.css.map */

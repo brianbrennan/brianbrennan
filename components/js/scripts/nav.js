@@ -10,7 +10,7 @@ $(document).ready(function(){
 function nav(){
 	var scroll = $(document).scrollTop();
 	var height = $('.hero').height();
-	console.log(height);
+	
 
 	if(height > 0){
 

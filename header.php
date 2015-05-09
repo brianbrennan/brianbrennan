@@ -1,3 +1,5 @@
+<?php require('/blog/wp-load.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +7,11 @@
 	<title>Brian Brennan | Web Designer &amp; Developer</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="components/js/nav.js"></script>
+	<script src="components/js/work.js"></script>
 	<link rel="stylesheet" href="components/css/style.css">
 </head>
 <body>
-	<header class="light">
+	<header class="light nav-down">
 		<div class="wrapper">
 		<nav>
 			<a href="index.php"><div class="logo">
@@ -18,11 +21,11 @@
 			</a>
 
 			<ul>
-				<a href="index.php"><li>Home</li></a>
-				<a href="work.php"><li>Work</li></a>
-				<a href="about.php"><li>About</li></a>
-				<a href="/blog/index.php"><li>Blog</li></a>
-				<a href="contact.php"><li>Contact</li></a>
+				<li><a href="index.php">Home</a></li>
+				<li><a href="work.php">Work</a></li></a>
+				<li><a href="about.php">About</a></li></a>
+				<li><a href="blog">Blog</a></li></a>
+				<li class="contact"><a href="contact.php">Contact</a></li></a>
 			</ul>
 		</nav>
 		</div>

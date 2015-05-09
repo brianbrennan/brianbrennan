@@ -4,7 +4,7 @@
 	Author: Brian Brennan
 	Author URI : http://brianbrenna.com
 
-*/
+	*/
 
 
 
@@ -117,6 +117,7 @@ $xlFontSize:	60px;
 $white:			#FFF;
 $black:			#313131;
 $gray:			#888;
+$red:			#FF5B71;
 
 //-----------------------------------------------Mixins-----------------------------------------
 
@@ -125,7 +126,7 @@ $susy: (
 	gutters: 1/4,
 	math: fluid,
 	output: float,
-	gutter-position: inside,
+	gutter-position: after,
 	);
 
 
@@ -138,12 +139,16 @@ body{
 	line-height:1.5;
 	font-size:$regFontSize;
 	color:$black;
-	height:1880vh;
 }
 
 a{
 	text-decoration:none;
 	color:inherit;
+	@include transition(.3s);
+
+	&:hover{
+		color:$red;
+	}
 }
 
 p{
@@ -192,6 +197,13 @@ h6{
 	background-position:cover;
 	background-repeat:no-repeat;
 	background-size:100% auto;
+
+	&:hover{
+		background:url('../img/logo-red.png');
+		background-position:cover;
+		background-repeat:no-repeat;
+		background-size:100% auto;
+	}
 }
 
 header{
@@ -201,9 +213,10 @@ header{
 	position:fixed;
 	width:100%;
 	background:$white;
-	box-shadow: $gray 0px 0px 10px;
+	box-shadow: $gray 0px 0px 3px;
 	@include transition(.3s);
-
+	top:0px;
+	z-index:10;
 }
 
 nav{
@@ -211,7 +224,7 @@ nav{
 
 	.logo{
 		@include span(1 of 8);
-		height:90px;
+		height:$lg;
 		vertical-align:middle;
 		@include transition(.3s);
 
@@ -224,13 +237,33 @@ nav{
 			text-align:center;
 			@include span(1 of 5);
 			vertical-align:middle;
-			@include transition(.3s);
+			text-transform:uppercase;
+			font-size:$smFontSize;
+			font-weight:900;
+			letter-spacing:0.15em;
 
-			&:hover{
-				color:$gray;
-			}
+			&:nth-child(5){@include last();}
 		}
 	}
+
+	.contact{
+		a{
+			padding:$sm;
+			border:$mic solid $black;
+
+			&:hover{
+				border-color:$red;
+			}
+		}
+
+
+
+	}
+}
+
+.nav-up {
+	@include transition(.3s);
+	top: -(90px);
 }
 
 header.light{
@@ -241,22 +274,34 @@ header.light{
 		.logo{
 			background:url('../img/logo-light.png');
 			@include span(1 of 8);
-			height:90px;
+			height:$lg;
 			vertical-align:middle;
 			background-position:cover;
 			background-repeat:no-repeat;
 			background-size:100% auto;
 			@include transition(.3s);
 
+			&:hover{
+				background:url('../img/logo-red.png');
+				background-position:cover;
+				background-repeat:no-repeat;
+				background-size:100% auto;
+			}
+
 		}
 
 		ul{
 			li{
 				color:$white;
-				@include transition(.3s);
+			}
+		}
+
+		.contact{
+			a{
+				border:$mic solid $white;
 
 				&:hover{
-					color:$gray;
+					border-color:$red;
 				}
 			}
 		}
@@ -266,6 +311,7 @@ header.light{
 
 .clear{
 	height:90px;
+	clear:both;
 }
 
 .rule{
@@ -286,7 +332,9 @@ header.light{
 	height:100vh;
 	margin-top:-90px;
 	width:100%;
-	background:$gray;
+	background: $gray;
+	background-size:100% auto;
+	background-attachment:fixed;
 }
 
 .content{
@@ -295,7 +343,47 @@ header.light{
 }
 
 .section{
-	margin:$lg 0;
+	margin:$reg 0;
+}
+
+.workPiece{
+	margin:$sm inherit;
+	@include span(4);
+	height:100px;
+	max-height:300px;
+	background:$black;
+
+	&:nth-child(3){@include last();}
+}
+
+.post{
+	margin:$sm inherit;
+	@include span(4);
+
+	a{
+		border:5px solid $black;
+		padding:$sm;
+		display:block;
+		min-height:150px;
+		position:relative;
+		z-index:0;
+
+		&:hover{
+			color:$red;
+			border-color:$red;
+		}
+
+		span{
+			font-size:$miniFontSize;
+			display:block;
+			position:absolute;
+			bottom:$sm;
+			right:$sm;
+			
+		}
+	}
+
+	&:nth-child(5){@include last()}
 }
 
 //---------------About
@@ -304,8 +392,34 @@ header.light{
 	@include container(60%);
 }
 
+//---------------Work
+
+.work{
+	@include container(60%);
+}
+
 //---------------Blog
 
 .blog{
+	margin:$lg 0;
 	@include container(60%);
+}
+
+.clearSingle{
+	height:$reg;
+	clear:both;
+}
+
+.single{
+	h1{
+		@include span(8);
+	}
+	h4{
+		margin:$sm 0;
+		@include span(3 omega);
+	}
+	.rule{
+		float:left;
+		clear:left;
+	}
 }

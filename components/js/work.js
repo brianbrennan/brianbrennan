@@ -1,1 +1,1 @@
-work.js;
+$(document).ready(function(){var e=$(".workPiece").width();$(".workPiece").css("height",e),console.log(e)});
