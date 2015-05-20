@@ -123,15 +123,41 @@ h6 {
   font-size: 12px;
 }
 
-.wrapper {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+@media (min-width: 1600px) {
+  .wrapper {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wrapper:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 }
-.wrapper:after {
-  content: " ";
-  display: block;
-  clear: both;
+@media (min-width: 1000px) and (max-width: 1600px) {
+  .wrapper {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wrapper:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 0) and (max-width: 1000px) {
+  .wrapper {
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wrapper:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 }
 
 .logo {
@@ -192,7 +218,7 @@ nav ul li {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 900;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.3em;
 }
 nav ul li:nth-child(5) {
   float: right;
@@ -257,6 +283,9 @@ header.light nav .contact a:hover {
   width: 60px;
   background: #313131;
   margin: 30px 0;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .rule2 {
@@ -264,6 +293,17 @@ header.light nav .contact a:hover {
   width: 60px;
   background: #313131;
   margin: 30px 0;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.red {
+  background: #FF5B71;
+  color: #FF5B71;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .hero {
@@ -277,14 +317,42 @@ header.light nav .contact a:hover {
 
 .content {
   padding: 60px 0;
-  max-width: 60%;
-  margin-left: auto;
-  margin-right: auto;
 }
-.content:after {
-  content: " ";
-  display: block;
-  clear: both;
+@media (min-width: 1600px) {
+  .content {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .content:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1600px) {
+  .content {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .content:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 0) and (max-width: 1000px) {
+  .content {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .content:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 }
 
 .section {
@@ -307,9 +375,28 @@ header.light nav .contact a:hover {
 
 .post {
   margin: 15px inherit;
-  width: 32.20339%;
-  float: left;
-  margin-right: 1.69492%;
+}
+@media (min-width: 1400px) {
+  .post {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  .post:nth-child(3n) {
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 0) and (max-width: 1400px) {
+  .post {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  .post:nth-child(2n) {
+    float: right;
+    margin-right: 0;
+  }
 }
 .post a {
   border: 5px solid #313131;
@@ -330,43 +417,119 @@ header.light nav .contact a:hover {
   bottom: 15px;
   right: 15px;
 }
-.post:nth-child(5) {
-  float: right;
-  margin-right: 0;
+
+@media (min-width: 1600px) {
+  .about {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1600px) {
+  .about {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 0) and (max-width: 1000px) {
+  .about {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 }
 
-.about {
-  max-width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+@media (min-width: 1600px) {
+  .work {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .work:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 }
-.about:after {
-  content: " ";
-  display: block;
-  clear: both;
+@media (min-width: 1000px) and (max-width: 1600px) {
+  .work {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .work:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 }
-
-.work {
-  max-width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.work:after {
-  content: " ";
-  display: block;
-  clear: both;
+@media (min-width: 0) and (max-width: 1000px) {
+  .work {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .work:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 }
 
 .blog {
   margin: 60px 0;
-  max-width: 60%;
-  margin-left: auto;
-  margin-right: auto;
 }
-.blog:after {
-  content: " ";
-  display: block;
-  clear: both;
+@media (min-width: 1600px) {
+  .blog {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .blog:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1600px) {
+  .blog {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .blog:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 0) and (max-width: 1000px) {
+  .blog {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .blog:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 }
 
 .clearSingle {

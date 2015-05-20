@@ -119,6 +119,12 @@ $black:			#313131;
 $gray:			#888;
 $red:			#FF5B71;
 
+//---------------------Screens
+
+$mob:			600px;
+$tab:			1000px;
+$max:			1600px;
+
 //-----------------------------------------------Mixins-----------------------------------------
 
 $susy: (
@@ -129,7 +135,29 @@ $susy: (
 	gutter-position: after,
 	);
 
+@mixin contain(){
+	@include breakpoint($max){
+		@include container(960px);
+	}
+	@include breakpoint($tab $max){
+		@include container(60%);
+	}
+	@include breakpoint(0 $tab){
+		@include container(90%);
+	}
+}
 
+@mixin wrapper(){
+	@include breakpoint($max){
+		@include container(1280px);
+	}
+	@include breakpoint($tab $max){
+		@include container(80%);
+	}
+	@include breakpoint(0 $tab){
+		@include container(95%);
+	}
+}
 
 //-----------------------------------------------Elements Styles-----------------------------------------
 
@@ -189,7 +217,7 @@ h6{
 
 
 .wrapper{
-	@include container(80%);
+	@include wrapper();
 }
 
 .logo{
@@ -240,7 +268,7 @@ nav{
 			text-transform:uppercase;
 			font-size:$smFontSize;
 			font-weight:900;
-			letter-spacing:0.15em;
+			letter-spacing:0.3em;
 
 			&:nth-child(5){@include last();}
 		}
@@ -319,6 +347,7 @@ header.light{
 	width:$lg;
 	background:$black;
 	margin:$reg 0;
+	@include transition(.2s);
 }
 
 .rule2{
@@ -326,6 +355,13 @@ header.light{
 	width:$lg;
 	background:$black;
 	margin:$reg 0;
+	@include transition(.2s);
+}
+
+.red{
+	background:$red;
+	color:$red;
+	@include transition(.2s);
 }
 
 .hero{
@@ -339,7 +375,7 @@ header.light{
 
 .content{
 	padding:$lg 0;
-	@include container(60%);
+	@include contain();
 }
 
 .section{
@@ -358,7 +394,16 @@ header.light{
 
 .post{
 	margin:$sm inherit;
-	@include span(4);
+	@include breakpoint(1400px){
+		@include span(4);
+
+		&:nth-child(3n){@include last()}
+	}
+	@include breakpoint(0 1400px){
+		@include span(6);
+
+		&:nth-child(2n){@include last()}
+	}
 
 	a{
 		border:5px solid $black;
@@ -382,27 +427,25 @@ header.light{
 			
 		}
 	}
-
-	&:nth-child(5){@include last()}
 }
 
 //---------------About
 
 .about{
-	@include container(60%);
+	@include contain();
 }
 
 //---------------Work
 
 .work{
-	@include container(60%);
+	@include contain();
 }
 
 //---------------Blog
 
 .blog{
 	margin:$lg 0;
-	@include container(60%);
+	@include contain();
 }
 
 .clearSingle{
