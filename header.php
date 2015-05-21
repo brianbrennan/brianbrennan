@@ -12,6 +12,7 @@ require('blog/wp-load.php');
 	<script src="components/js/nav.js"></script>
 	<script src="components/js/work.js"></script>
 	<script src="components/js/hover.js"></script>
+	<script src="components/js/contact.js"></script>
 	<link rel="stylesheet" href="components/css/style.css">
 </head>
 <body>
@@ -37,4 +38,17 @@ require('blog/wp-load.php');
 			</nav>
 		</div>
 	</header>
+
+	<div class="mobileHead">
+		<a href="index.php"> 
+					<div class="logoContain">
+						<div class="logo">
+
+						</div>
+					</div>
+
+				</a>
+	</div>
+
+
 	<div class="clear"></div>

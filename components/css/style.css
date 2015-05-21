@@ -71,6 +71,11 @@ table {
   font-weight: 900;
   src: local("Lato"), url(//brick.a.ssl.fastly.net/fonts/lato/900.woff) format("woff");
 }
+::selection {
+  color: #FFF;
+  background: #FF5B71;
+}
+
 body {
   font-family: "Lato";
   line-height: 1.5;
@@ -101,6 +106,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 60px;
+}
+@media (min-width: 0) and (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
 }
 
 h2 {
@@ -387,9 +397,10 @@ header.light nav .contact a:hover {
 .hero {
   margin-top: -90px;
   width: 100%;
-  background: #888;
-  background-size: 100% auto;
+  background: url("../img/hero.png");
+  background-size: cover;
   background-attachment: fixed;
+  background-position: 50% 0;
 }
 @media (min-width: 600px) {
   .hero {
@@ -523,6 +534,84 @@ header.light nav .contact a:hover {
   position: absolute;
   bottom: 15px;
   right: 15px;
+}
+
+@media (min-width: 1600px) {
+  .footer nav {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer nav:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1600px) {
+  .footer nav {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer nav:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 0) and (max-width: 1000px) {
+  .footer nav {
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer nav:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+.footer nav ul {
+  float: left;
+}
+.footer nav ul li {
+  text-transform: capitalize;
+  color: #888;
+  font-weight: 400;
+  letter-spacing: 2px;
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+}
+.footer nav ul li:nth-child(3n) {
+  float: right;
+  margin-right: 0;
+}
+.footer nav ul li a:hover {
+  color: #313131;
+}
+.footer nav .logoContain {
+  float: right;
+  margin-right: 60px;
+  margin-top: 30px;
+}
+.footer nav .logoContain .logo {
+  opacity: 0.7;
+}
+.footer nav .logoContain .logo:hover {
+  background: url("../img/logo.png");
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  opacity: 1;
+  margin: 0;
+}
+.footer .copy {
+  font-size: 12px;
+  color: #888;
+  margin: 8px 0;
+  text-align: center;
 }
 
 @media (min-width: 1600px) {
@@ -686,6 +775,94 @@ header.light nav .contact a:hover {
   position: absolute;
   right: -45px;
   font-size: 80px;
+}
+@media (min-width: 0) and (max-width: 600px) {
+  .quote {
+    font-size: 24px;
+    width: 80%;
+  }
+}
+
+@media (min-width: 0) and (max-width: 600px) {
+  #contact {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #contact:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+#contact *:focus {
+  outline: none;
+  border-color: #FF5B71;
+  color: #FF5B71;
+}
+#contact label h4 {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  margin: 8px 0;
+}
+#contact input, #contact textarea {
+  border: 4px solid #313131;
+  padding: 8px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  font-family: "Lato";
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: #313131;
+}
+#contact .name {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+}
+#contact .name input {
+  width: 90%;
+}
+#contact .email {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+  float: right;
+  margin-right: 0;
+}
+#contact .email input {
+  width: 100%;
+}
+#contact .email div {
+  width: 90%;
+  float: right;
+}
+#contact .clear {
+  height: 15px;
+}
+#contact textarea {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  resize: none;
+}
+#contact #submit {
+  background: #FFF;
+  font-size: 12px;
+  padding: 15px;
+  text-transform: uppercase;
+  margin: 30px auto;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+#contact #submit:hover {
+  color: #FF5B71;
+  border-color: #FF5B71;
 }
 
 /*# sourceMappingURL=style.css.map */

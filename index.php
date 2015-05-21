@@ -61,5 +61,38 @@
 
 		<div class="clear"></div>
 	</div>
+
+	<div class="contactSection section">
+		
+		<h2>Contact</h2>
+
+		<div class="rule2"></div>
+
+
+		<form id="contact" name="contact" method="post" action="contact.php">
+			<div class="name">
+				<label for="name"><h4>Name</h4></label>
+				<input type="text" name="name" required>
+			</div>
+			
+			<div class="email">
+				<div>
+					<label for="email"><h4>Email</h4></label>
+					<input type="email" name="email" required>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+			<label for="message"><h4>Message</h4></label>
+			<textarea name="message" required rows="5"></textarea>
+
+			<input type="submit" name="submit" value="Submit" id="submit">
+
+		</form>
+
+
+
+	</div>
 </div>
 <?php include 'footer.php' ?>
