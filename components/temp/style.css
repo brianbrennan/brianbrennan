@@ -187,49 +187,120 @@ header {
   top: 0px;
   z-index: 10;
 }
+@media (min-width: 0) and (max-width: 600px) {
+  header {
+    display: none;
+  }
+}
 
 nav {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-nav .logo {
+@media (min-width: 1280px) {
+  nav ul {
+    width: 40.67797%;
+    float: right;
+    margin-right: 0;
+  }
+  nav ul li {
+    margin: 15px 0;
+    text-align: center;
+    width: 16.66667%;
+    float: left;
+    margin-right: 4.16667%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0.3em;
+  }
+  nav ul li:nth-child(5) {
+    float: right;
+    margin-right: 0;
+  }
+  nav .contact a {
+    padding: 15px;
+    border: 3px solid #313131;
+  }
+  nav .contact a:hover {
+    border-color: #FF5B71;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1280px) {
+  nav ul {
+    width: 57.62712%;
+    float: right;
+    margin-right: 0;
+  }
+  nav ul li {
+    margin: 15px 0;
+    text-align: center;
+    width: 16.66667%;
+    float: left;
+    margin-right: 4.16667%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0.3em;
+  }
+  nav ul li:nth-child(5) {
+    float: right;
+    margin-right: 0;
+  }
+  nav .contact a {
+    padding: 15px;
+    border: 3px solid #313131;
+  }
+  nav .contact a:hover {
+    border-color: #FF5B71;
+  }
+}
+@media (min-width: 600px) and (max-width: 1000px) {
+  nav ul {
+    width: 74.57627%;
+    float: right;
+    margin-right: 0;
+  }
+  nav ul li {
+    margin: 15px 0;
+    text-align: center;
+    width: 13.7931%;
+    float: left;
+    margin-right: 3.44828%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0.3em;
+  }
+  nav .contact a {
+    padding: 15px;
+    border: 3px solid #313131;
+  }
+  nav .contact a:hover {
+    border-color: #FF5B71;
+  }
+}
+@media (min-width: 0) and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+}
+nav .logoContain {
   width: 10.25641%;
   float: left;
   margin-right: 2.5641%;
+}
+nav .logo {
   height: 60px;
   vertical-align: middle;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
-}
-nav ul {
-  width: 40.67797%;
-  float: right;
-  margin-right: 0;
-}
-nav ul li {
-  margin: 15px 0;
-  text-align: center;
-  width: 16.66667%;
-  float: left;
-  margin-right: 4.16667%;
-  vertical-align: middle;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 0.3em;
-}
-nav ul li:nth-child(5) {
-  float: right;
-  margin-right: 0;
-}
-nav .contact a {
-  padding: 15px;
-  border: 3px solid #313131;
-}
-nav .contact a:hover {
-  border-color: #FF5B71;
+  width: 131px;
 }
 
 .nav-up {
@@ -243,19 +314,22 @@ header.light {
   background: none;
   box-shadow: none;
 }
-header.light nav .logo {
-  background: url("../img/logo-light.png");
+header.light nav .logoContain {
   width: 10.25641%;
   float: left;
   margin-right: 2.5641%;
+}
+header.light nav .logo {
   height: 60px;
   vertical-align: middle;
-  background-position: cover;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
+  width: 131px;
+  background: url("../img/logo-light.png");
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 header.light nav .logo:hover {
   background: url("../img/logo-red.png");
@@ -276,6 +350,10 @@ header.light nav .contact a:hover {
 .clear {
   height: 90px;
   clear: both;
+}
+
+.viewAll {
+  text-align: center;
 }
 
 .rule {
@@ -307,12 +385,21 @@ header.light nav .contact a:hover {
 }
 
 .hero {
-  height: 100vh;
   margin-top: -90px;
   width: 100%;
   background: #888;
   background-size: 100% auto;
   background-attachment: fixed;
+}
+@media (min-width: 600px) {
+  .hero {
+    height: 100vh;
+  }
+}
+@media (min-width: 0) and (max-width: 600px) {
+  .hero {
+    height: 500px;
+  }
 }
 
 .content {
@@ -361,16 +448,28 @@ header.light nav .contact a:hover {
 
 .workPiece {
   margin: 15px inherit;
-  width: 32.20339%;
-  float: left;
-  margin-right: 1.69492%;
   height: 100px;
   max-height: 300px;
   background: #313131;
 }
-.workPiece:nth-child(3) {
-  float: right;
-  margin-right: 0;
+@media (min-width: 600px) {
+  .workPiece {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  .workPiece:nth-child(3n) {
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 0) and (max-width: 600px) {
+  .workPiece {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .post {
@@ -387,7 +486,7 @@ header.light nav .contact a:hover {
     margin-right: 0;
   }
 }
-@media (min-width: 0) and (max-width: 1400px) {
+@media (min-width: 600px) and (max-width: 1400px) {
   .post {
     width: 49.15254%;
     float: left;
@@ -395,6 +494,14 @@ header.light nav .contact a:hover {
   }
   .post:nth-child(2n) {
     float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 0) and (max-width: 600px) {
+  .post {
+    width: 100%;
+    float: left;
+    margin-left: 0;
     margin-right: 0;
   }
 }
@@ -551,6 +658,34 @@ header.light nav .contact a:hover {
 .single .rule {
   float: left;
   clear: left;
+}
+.single .image {
+  text-align: center;
+  max-width: 100%;
+}
+
+.quote {
+  position: relative;
+  color: #888;
+  font-size: 36px;
+  font-style: italic;
+  width: 60%;
+  margin: 45px auto;
+}
+.quote:before {
+  content: open-quote;
+  color: #FF5B71;
+  position: absolute;
+  top: -45px;
+  left: -45px;
+  font-size: 80px;
+}
+.quote:after {
+  content: close-quote;
+  color: #FF5B71;
+  position: absolute;
+  right: -45px;
+  font-size: 80px;
 }
 
 /*# sourceMappingURL=style.css.map */

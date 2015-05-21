@@ -245,48 +245,120 @@ header{
 	@include transition(.3s);
 	top:0px;
 	z-index:10;
+
+	@include breakpoint(0 $mob){
+		display:none;
+	}
 }
 
 nav{
 	@include transition(.3s);
 
-	.logo{
-		@include span(1 of 8);
-		height:$lg;
-		vertical-align:middle;
-		@include transition(.3s);
+	@include breakpoint(1280px){
 
-	}
+		ul{
+			@include span(5 omega);
+			li{
+				margin:$sm 0;
+				text-align:center;
+				@include span(1 of 5);
+				vertical-align:middle;
+				text-transform:uppercase;
+				font-size:$smFontSize;
+				font-weight:900;
+				letter-spacing:0.3em;
 
-	ul{
-		@include span(5 omega);
-		li{
-			margin:$sm 0;
-			text-align:center;
-			@include span(1 of 5);
-			vertical-align:middle;
-			text-transform:uppercase;
-			font-size:$smFontSize;
-			font-weight:900;
-			letter-spacing:0.3em;
-
-			&:nth-child(5){@include last();}
-		}
-	}
-
-	.contact{
-		a{
-			padding:$sm;
-			border:$mic solid $black;
-
-			&:hover{
-				border-color:$red;
+				&:nth-child(5){@include last();}
 			}
 		}
 
+		.contact{
+			a{
+				padding:$sm;
+				border:$mic solid $black;
 
+				&:hover{
+					border-color:$red;
+				}
+			}
+		}	
+	}//end of breakpoint for desktop
 
+	@include breakpoint($tab 1280px){
+
+		ul{
+			@include span(7 omega);
+			li{
+				margin:$sm 0;
+				text-align:center;
+				@include span(1 of 5);
+				vertical-align:middle;
+				text-transform:uppercase;
+				font-size:$smFontSize;
+				font-weight:900;
+				letter-spacing:0.3em;
+
+				&:nth-child(5){@include last();}
+			}
+		}
+
+		.contact{
+			a{
+				padding:$sm;
+				border:$mic solid $black;
+
+				&:hover{
+					border-color:$red;
+				}
+			}
+		}	
+	}//end of small desktop breakpoint
+
+	@include breakpoint($mob $tab){
+
+		ul{
+			@include span(9 omega);
+			li{
+				margin:$sm 0;
+				text-align:center;
+				@include span(1 of 6);
+				vertical-align:middle;
+				text-transform:uppercase;
+				font-size:$smFontSize;
+				font-weight:900;
+				letter-spacing:0.3em;
+
+				
+			}
+		}
+
+		.contact{
+			a{
+				padding:$sm;
+				border:$mic solid $black;
+
+				&:hover{
+					border-color:$red;
+				}
+			}
+		}	
+	}//end of tablet breakpoint
+
+	@include breakpoint(0 $mob){
+		display:none;
 	}
+
+	.logoContain{
+		@include span(1 of 8);
+	}
+
+	.logo{
+		height:$lg;
+		vertical-align:middle;
+		@include transition(.3s);
+		width:131px;
+	}
+
 }
 
 .nav-up {
@@ -299,15 +371,19 @@ header.light{
 	box-shadow:none;
 	nav{
 
-		.logo{
-			background:url('../img/logo-light.png');
+		.logoContain{
 			@include span(1 of 8);
+		}
+
+		.logo{
 			height:$lg;
 			vertical-align:middle;
+			@include transition(.3s);
+			width:131px;
+			background:url('../img/logo-light.png');
 			background-position:cover;
 			background-repeat:no-repeat;
 			background-size:100% auto;
-			@include transition(.3s);
 
 			&:hover{
 				background:url('../img/logo-red.png');
@@ -315,7 +391,6 @@ header.light{
 				background-repeat:no-repeat;
 				background-size:100% auto;
 			}
-
 		}
 
 		ul{
@@ -342,6 +417,10 @@ header.light{
 	clear:both;
 }
 
+.viewAll{
+	text-align:center;
+}
+
 .rule{
 	height:$tny;
 	width:$lg;
@@ -365,7 +444,15 @@ header.light{
 }
 
 .hero{
-	height:100vh;
+
+	@include breakpoint($mob){
+		height:100vh;
+	}
+
+	@include breakpoint(0 $mob){
+		height:500px;
+	}
+
 	margin-top:-90px;
 	width:100%;
 	background: $gray;
@@ -384,12 +471,20 @@ header.light{
 
 .workPiece{
 	margin:$sm inherit;
-	@include span(4);
 	height:100px;
 	max-height:300px;
 	background:$black;
 
-	&:nth-child(3){@include last();}
+	@include breakpoint($mob){
+		@include span(4);
+
+		&:nth-child(3n){@include last()}
+	}
+
+	@include breakpoint(0 $mob){
+		@include span(12);
+	}
+
 }
 
 .post{
@@ -399,10 +494,13 @@ header.light{
 
 		&:nth-child(3n){@include last()}
 	}
-	@include breakpoint(0 1400px){
+	@include breakpoint($mob 1400px){
 		@include span(6);
 
 		&:nth-child(2n){@include last()}
+	}
+	@include breakpoint(0 $mob){
+		@include span(12);
 	}
 
 	a{
@@ -465,4 +563,37 @@ header.light{
 		float:left;
 		clear:left;
 	}
+
+	
+	.image{
+		text-align:center;
+		max-width:100%;
+	}
+}
+
+.quote{
+
+	&:before{
+		content:open-quote;
+		color:$red;
+		position:absolute;
+		top:-($med);
+		left:-($med);
+		font-size:80px;
+	}
+
+	&:after{
+		content:close-quote;
+		color: $red;
+		position:absolute;
+		right:-($med);
+		font-size:80px;
+	}
+
+	position:relative;
+	color:$gray;
+	font-size:$lgFontSize;
+	font-style:italic;
+	width:60%;
+	margin:$med auto;
 }
