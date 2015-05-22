@@ -8,10 +8,6 @@
 				<li><a href="blog">Blog</a></li>
 				<li><a href="contact.php">Contact</a></li>
 			</ul>
-
-			<div class="logoContain">
-				<a href="index.php"><div class="logo"></div></a>
-			</div>
 		</nav>
 
 		<div class="copy">

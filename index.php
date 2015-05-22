@@ -13,13 +13,24 @@
 		<div class="rule2"></div>
 
 		<div class="workPiece">
-
+			<div>
+				<span></span>
+				<img src="components/img/aba.png" alt="">
+			</div>
 		</div>
-		<div class="workPiece">
 
+		<div class="workPiece">
+			<div>
+				<span></span>
+				<img src="components/img/cards.gif" alt="">
+			</div>
 		</div>
-		<div class="workPiece">
 
+		<div class="workPiece">
+			<div>
+				<span></span>
+				<img src="components/img/anna.png" alt="">
+			</div>
 		</div>
 		<h5 class="viewAll"><a href="work.php">View All</a></h5>
 		<div class="clear"></div>
@@ -69,17 +80,39 @@
 		<div class="rule2"></div>
 
 
-		<form id="contact" name="contact" method="post" action="contact.php">
+<!--		<?php
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$message = $_POST['message'];
+		$from = 'From: Website Contact Form';
+		$to = 'me@brianbrennan.com';
+		$subject = 'Site Message';
+
+		$body = "From: $name\n Email: $email\n Message:\n $message";
+		?>
+
+		<?php 
+		if($_POST['submit']){
+
+			if (mail ($to, $subject, $body, $from)) {
+				header("Location: index.php#contact"); 
+				echo '<p class="infoMessage">Your message has been sent!</p>';
+			} else { 
+				echo '<p class="errMessage">Something went wrong, go back and try again!</p>'; 
+			}
+		} 
+		else{
+			echo '<form id="contact" name="contact" method="post" action="index.php?submit=true">
 			<div class="name">
-				<label for="name"><h4>Name</h4></label>
-				<input type="text" name="name" required>
+			<label for="name"><h4>Name</h4></label>
+			<input type="text" name="name" required>
 			</div>
 			
 			<div class="email">
-				<div>
-					<label for="email"><h4>Email</h4></label>
-					<input type="email" name="email" required>
-				</div>
+			<div>
+			<label for="email"><h4>Email</h4></label>
+			<input type="email" name="email" required>
+			</div>
 			</div>
 
 			<div class="clear"></div>
@@ -89,10 +122,12 @@
 
 			<input type="submit" name="submit" value="Submit" id="submit">
 
-		</form>
+			</form>';
+		} 
+		?>
 
+	-->
 
-
-	</div>
+</div>
 </div>
 <?php include 'footer.php' ?>

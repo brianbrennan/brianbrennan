@@ -210,16 +210,16 @@ nav {
 }
 @media (min-width: 1280px) {
   nav ul {
-    width: 40.67797%;
+    width: 40%;
     float: right;
     margin-right: 0;
   }
   nav ul li {
     margin: 15px 0;
     text-align: center;
-    width: 16.66667%;
+    width: 14.28571%;
     float: left;
-    margin-right: 4.16667%;
+    margin-right: 7.14286%;
     vertical-align: middle;
     text-transform: uppercase;
     font-size: 14px;
@@ -240,16 +240,16 @@ nav {
 }
 @media (min-width: 1000px) and (max-width: 1280px) {
   nav ul {
-    width: 57.62712%;
+    width: 57.14286%;
     float: right;
     margin-right: 0;
   }
   nav ul li {
     margin: 15px 0;
     text-align: center;
-    width: 16.66667%;
+    width: 14.28571%;
     float: left;
-    margin-right: 4.16667%;
+    margin-right: 7.14286%;
     vertical-align: middle;
     text-transform: uppercase;
     font-size: 14px;
@@ -270,16 +270,16 @@ nav {
 }
 @media (min-width: 600px) and (max-width: 1000px) {
   nav ul {
-    width: 74.57627%;
+    width: 74.28571%;
     float: right;
     margin-right: 0;
   }
   nav ul li {
     margin: 15px 0;
     text-align: center;
-    width: 13.7931%;
+    width: 11.76471%;
     float: left;
-    margin-right: 3.44828%;
+    margin-right: 5.88235%;
     vertical-align: middle;
     text-transform: uppercase;
     font-size: 14px;
@@ -300,9 +300,9 @@ nav {
   }
 }
 nav .logoContain {
-  width: 10.25641%;
+  width: 8.69565%;
   float: left;
-  margin-right: 2.5641%;
+  margin-right: 4.34783%;
 }
 nav .logo {
   height: 60px;
@@ -325,9 +325,9 @@ header.light {
   box-shadow: none;
 }
 header.light nav .logoContain {
-  width: 10.25641%;
+  width: 8.69565%;
   float: left;
-  margin-right: 2.5641%;
+  margin-right: 4.34783%;
 }
 header.light nav .logo {
   height: 60px;
@@ -461,13 +461,14 @@ header.light nav .contact a:hover {
   margin: 15px inherit;
   height: 100px;
   max-height: 300px;
-  background: #313131;
+  border: 5px solid #313131;
+  box-sizing: border-box;
 }
 @media (min-width: 600px) {
   .workPiece {
-    width: 32.20339%;
+    width: 31.42857%;
     float: left;
-    margin-right: 1.69492%;
+    margin-right: 2.85714%;
   }
   .workPiece:nth-child(3n) {
     float: right;
@@ -482,15 +483,29 @@ header.light nav .contact a:hover {
     margin-right: 0;
   }
 }
+.workPiece div {
+  display: table-cell;
+}
+.workPiece div span {
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+}
+.workPiece div img {
+  vertical-align: middle;
+  display: inline-block;
+  width: 90%;
+  margin: auto;
+}
 
 .post {
   margin: 15px inherit;
 }
 @media (min-width: 1400px) {
   .post {
-    width: 32.20339%;
+    width: 31.42857%;
     float: left;
-    margin-right: 1.69492%;
+    margin-right: 2.85714%;
   }
   .post:nth-child(3n) {
     float: right;
@@ -499,9 +514,9 @@ header.light nav .contact a:hover {
 }
 @media (min-width: 600px) and (max-width: 1400px) {
   .post {
-    width: 49.15254%;
+    width: 48.57143%;
     float: left;
-    margin-right: 1.69492%;
+    margin-right: 2.85714%;
   }
   .post:nth-child(2n) {
     float: right;
@@ -574,17 +589,22 @@ header.light nav .contact a:hover {
 }
 .footer nav ul {
   float: left;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
 }
 .footer nav ul li {
   text-transform: capitalize;
   color: #888;
   font-weight: 400;
   letter-spacing: 2px;
-  width: 32.20339%;
+  width: 17.24138%;
   float: left;
-  margin-right: 1.69492%;
+  margin-right: 3.44828%;
+  text-align: center;
 }
-.footer nav ul li:nth-child(3n) {
+.footer nav ul li:nth-child(5) {
   float: right;
   margin-right: 0;
 }
@@ -734,13 +754,13 @@ header.light nav .contact a:hover {
 }
 
 .single h1 {
-  width: 66.10169%;
+  width: 65.71429%;
   float: left;
-  margin-right: 1.69492%;
+  margin-right: 2.85714%;
 }
 .single h4 {
   margin: 15px 0;
-  width: 23.72881%;
+  width: 22.85714%;
   float: right;
   margin-right: 0;
 }
@@ -818,17 +838,17 @@ header.light nav .contact a:hover {
   color: #313131;
 }
 #contact .name {
-  width: 49.15254%;
+  width: 48.57143%;
   float: left;
-  margin-right: 1.69492%;
+  margin-right: 2.85714%;
 }
 #contact .name input {
   width: 90%;
 }
 #contact .email {
-  width: 49.15254%;
+  width: 48.57143%;
   float: left;
-  margin-right: 1.69492%;
+  margin-right: 2.85714%;
   float: right;
   margin-right: 0;
 }
@@ -863,6 +883,17 @@ header.light nav .contact a:hover {
 #contact #submit:hover {
   color: #FF5B71;
   border-color: #FF5B71;
+}
+
+.infoMessage, .errMessage {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 900;
+}
+
+.errMessage {
+  color: #FF5B71;
 }
 
 /*# sourceMappingURL=style.css.map */

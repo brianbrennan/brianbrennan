@@ -129,7 +129,7 @@ $max:			1600px;
 
 $susy: (
 	columns: 12,
-	gutters: 1/4,
+	gutters: 1/2,
 	math: fluid,
 	output: float,
 	gutter-position: after,
@@ -483,7 +483,8 @@ header.light{
 	margin:$sm inherit;
 	height:100px;
 	max-height:300px;
-	background:$black;
+	border:5px solid $black;
+	box-sizing:border-box;
 
 	@include breakpoint($mob){
 		@include span(4);
@@ -493,6 +494,23 @@ header.light{
 
 	@include breakpoint(0 $mob){
 		@include span(12);
+	}
+
+	div{
+		display:table-cell;
+
+		span{
+			display:inline-block;
+			width:1px;
+			height:100%;
+		}
+
+		img{
+			vertical-align: middle;
+			display:inline-block;
+			width:90%;
+			margin:auto;
+		}
 	}
 
 }
@@ -543,14 +561,16 @@ header.light{
 
 		ul{
 			float:left;
+			@include span(12);
 			li{
 				text-transform:capitalize;
 				color:$gray;
 				font-weight:400;
 				letter-spacing: 2px;
-				@include span(4);
+				@include span(2 of 10);
+				text-align:center;
 
-				&:nth-child(3n){
+				&:nth-child(5){
 					@include last();
 				}
 
@@ -737,4 +757,14 @@ header.light{
 	}
 }
 
+.infoMessage,.errMessage{
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing: 0.15em;
+	font-weight:900;
+}
+
+.errMessage{
+	color:$red;
+}
 
