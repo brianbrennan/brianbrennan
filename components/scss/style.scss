@@ -768,3 +768,37 @@ header.light{
 	color:$red;
 }
 
+
+//------------------------Mobile Menu
+
+.mobileHead{
+	display:none;
+	@include breakpoint(0 $mob){
+		display:block;
+	}
+
+	height:100px;
+	background:none;
+
+	.logoContain{
+		display:block;
+
+		.logo{
+			background: url('../img/logo.png');
+			background-position:cover;
+			background-repeat:no-repeat;
+			background-size:100% auto;
+			opacity:1;
+			margin:0;
+		}
+	}
+
+	.mobMenu{
+		width:100px;
+		height:100px;
+		float:right;
+		margin:$sm;
+		background:$black;
+	}
+}
+

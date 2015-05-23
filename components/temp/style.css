@@ -896,4 +896,33 @@ header.light nav .contact a:hover {
   color: #FF5B71;
 }
 
+.mobileHead {
+  display: none;
+  height: 100px;
+  background: none;
+}
+@media (min-width: 0) and (max-width: 600px) {
+  .mobileHead {
+    display: block;
+  }
+}
+.mobileHead .logoContain {
+  display: block;
+}
+.mobileHead .logoContain .logo {
+  background: url("../img/logo.png");
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  opacity: 1;
+  margin: 0;
+}
+.mobileHead .mobMenu {
+  width: 100px;
+  height: 100px;
+  float: right;
+  margin: 15px;
+  background: #313131;
+}
+
 /*# sourceMappingURL=style.css.map */

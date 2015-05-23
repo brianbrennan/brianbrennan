@@ -41,13 +41,14 @@ require('blog/wp-load.php');
 
 	<div class="mobileHead">
 		<a href="index.php"> 
-					<div class="logoContain">
-						<div class="logo">
+			<div class="logoContain">
+				<div class="logo">
 
-						</div>
-					</div>
+				</div>
+			</div>
+		</a>
 
-				</a>
+		<div class="mobMenu"></div>
 	</div>
 
 
